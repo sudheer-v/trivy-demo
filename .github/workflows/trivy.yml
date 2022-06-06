@@ -14,10 +14,7 @@ on:
   schedule:
     - cron: '41 16 * * 0'
 
-permissions:
-  contents: read
-  issues: write
-  pull-requests: write
+permissions: write-all
 
 jobs:
   scan-trivy:
