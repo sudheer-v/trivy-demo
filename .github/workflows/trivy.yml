@@ -54,7 +54,7 @@ jobs:
           format: 'sarif'
           ignore-unfixed: true
           vuln-type: 'os,library'
-          severity: 'CRITICAL,HIGH,WARNING'
+          severity: 'CRITICAL,HIGH,WARN,INFO'
           output: 'trivy-docker.sarif'
 
 
