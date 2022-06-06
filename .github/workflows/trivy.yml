@@ -29,6 +29,9 @@ jobs:
       
       - name: Run Trivy vulnerability scanner in repo mode
         uses: aquasecurity/trivy-action@master
+        env:
+          GITHUB_TOKEN: ${{ secrets.TEST }}
+          
         with:
           scan-type: 'fs'
           ignore-unfixed: true
@@ -53,6 +56,8 @@ jobs:
       - name: Scan current project
         id: codescan
         uses: anchore/scan-action@v3
+        env:
+          GITHUB_TOKEN: ${{ secrets.TEST }}
         with:
           path: "."
           severity-cutoff: high
