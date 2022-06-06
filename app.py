@@ -3,7 +3,7 @@ Hello world!
 """
 from __future__ import annotations  # pylint: disable=import-error
 
-from flask import Flask
+from flask import Flask  # pytlint: disable=import-error
 app = Flask(__name__)
 
 
