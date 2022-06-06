@@ -52,10 +52,9 @@ jobs:
         with:
           image-ref: 'docker.io/devops-counsel/py-app:${{ github.sha }}'
           format: 'sarif'
-          exit-code: '1'
           ignore-unfixed: true
           vuln-type: 'os,library'
-          severity: 'CRITICAL,HIGH'
+          severity: 'CRITICAL,HIGH,WARNING'
           output: 'trivy-docker.sarif'
 
 
