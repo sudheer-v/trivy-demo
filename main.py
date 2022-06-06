@@ -1,5 +1,5 @@
-from google.cloud import bigquery
 import datetime
+from google.cloud import bigquery
 from dateutil.relativedelta import relativedelta
 
 bq_client = bigquery.Client(project='devops-counsel-demo')
@@ -41,4 +41,5 @@ snap_query = f"""
     CLONE demo_dataset.demo_table
     OPTIONS(expiration_timestamp = TIMESTAMP "{str(expiry_date)} 00:00:00.00-00:00")
     """
+
 bq_client.query(snap_query)
