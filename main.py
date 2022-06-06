@@ -1,6 +1,6 @@
 import datetime
-from google.cloud import bigquery
-from dateutil.relativedelta import relativedelta
+from google.cloud import bigquery # pylint: disable=import-error
+from dateutil.relativedelta import relativedelta # pylint: disable=import-error
 
 bq_client = bigquery.Client(project='devops-counsel-demo')
 
