@@ -1,4 +1,4 @@
-FROM python:3.5-slim-buster
+FROM jiahangli/python3centos6:1.0
 
 WORKDIR /app
 
